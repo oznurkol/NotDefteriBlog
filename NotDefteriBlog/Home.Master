@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="NotDefteriBlog.Home" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <meta name="description" content='<%=desc %>' />
+    <meta name="keywords" content='<%=keyws%>' />
+	
+		
+     <title><%=baslik%>
+         <asp:ContentPlaceHolder ID="head" runat="server">
+         
+    </asp:ContentPlaceHolder></title>
+    <asp:ContentPlaceHolder ID="ckeditor" runat="server"></asp:ContentPlaceHolder>
+                        <script>
+                            function DivClicked() {
+                                var btnHidden = $('#<%= btnHidden.ClientID %>');
+                                if (btnHidden != null) {
+                                    btnHidden.click();
+                                }
+                            }
+                            function DivClicked2() {
+                                var btnHidden2 = $('#<%= btnHidden2.ClientID %>');
+                                if (btnHidden2 != null) {
+                                    btnHidden2.click();
+                                }
+                            }
+                        </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="updatepanel" runat="server">
+
+        </asp:ContentPlaceHolder>
+	<div class="pdb-30">
+		<div class="he-300">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+
+                        <asp:Literal ID="Literal5" runat="server"></asp:Literal>
+                        <asp:Button runat="server" id="btnHidden" style="display:none" onclick="btnHidden_OnClick" />
+                        <!--<div class="left-arrow glyphicon glyphicon-chevron-left" onclick="javascript:DivClicked(); return true;"></div>-->
+                        <asp:Image ID="Image1" runat="server" Height="300" CssClass="max-img" />
+                        <asp:Button runat="server" id="btnHidden2" style="display:none" onclick="btnHidden_OnClick2" />
+                        <!--<div class="right-arrow glyphicon glyphicon-chevron-right" onclick="javascript:DivClicked2(); return true;"></div>-->
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+		</div>
+	</div>
+    <div class="container">
+		<div class="main">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-1 bg-white main-border-4 mgb-30">
+                    <hr />
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+                    <hr />
+                 </div>
+              </div>
+            <%=icerik %>
+            <asp:ContentPlaceHolder ID="ortakisim" runat="server">
+
+            </asp:ContentPlaceHolder>
+            
+			<nav class="menualan glyphicon glyphicon-tasks" id="menualan"></nav>
+			<div class="menuac" id="menuac">
+				<ul>
+                    <asp:Literal ID="anasayfa" runat="server"></asp:Literal>
+                    <asp:Literal ID="kategoriler" runat="server"></asp:Literal>
+					<asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                    <asp:Literal ID="Literal2" runat="server"></asp:Literal>
+                    <asp:Literal ID="duyurularx" runat="server"></asp:Literal>
+                    <asp:Literal ID="galeri" runat="server"></asp:Literal>
+                    <asp:Literal ID="Literal4" runat="server"></asp:Literal>
+                    <asp:Literal ID="hakkimizda" runat="server"></asp:Literal>
+  					<asp:Literal ID="Literal3" runat="server"></asp:Literal>
+				</ul>
+			</div>
+			
+		</div>
+        <!--
+		<div class="search glyphicon glyphicon-search" id="search_click"></div>
+			<div class="input-group search" id="searching">
+				<input type="text" class="form-control" placeholder="Arama yap..." />
+				<span class="input-group-btn">
+                    <asp:Button ID="btn_ara" runat="server" Text="Ara" CssClass="btn btn-default top--7" />
+				</span>
+			</div>
+        -->
+        <div class="row">
+                <div class="col-md-9 col-md-offset-1 bg-white main-border-4 mgb-30">
+                    <hr />
+                        <div class="row">
+                            <div class="col-md-8"><%=copyyazi%></div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-12">Bugün giren kişi sayısı: <asp:Literal ID="bugunltr" runat="server"></asp:Literal></div>
+                                    <div class="col-md-12">Aktif kişi sayısı: <asp:Literal ID="aktifltr" runat="server"></asp:Literal></div>
+                                </div>
+                            </div>
+                        </div>
+                    <hr />
+                 </div>
+              </div>
+    </div>
+
+  <script>
+
+    $(document).ready(function() {
+        var first = true;
+        var opened = false;
+		var acik=$.now()+60*5;
+		var acik2=$.now();
+		var $menu = $('#menuac');
+		var $search = $('#searching');
+		var $search2 = $('#search_click');
+		if(first){
+			$menu.hide();
+			$search.hide();
+			first=false;
+		}
+		$('body').click(function() {
+			if(acik<$.now()){
+				$menu.hide(100);
+				acik=$.now();
+			}
+		});
+        $('#menualan').click(function() {
+                $menu.show(100);
+				acik=$.now()+60*5;
+        });
+		$('#search_click').click(function() {
+			if(!opened & acik2<$.now()){
+            $search.show(100);
+			$search2.animate({right: "100px",fontSize: "32px",},1000);
+			$search.animate({right: "60px"},2000);
+			acik2=$.now()+60*5;
+			opened=true;
+			}else{
+				$search.animate({right: "0px"},50);
+				$search2.animate({right: "0px",fontSize: "48px",},200);
+				$search.hide(10);
+				opened=false;
+			}
+			
+        });
+        $('#menuac').click(function() {
+            $menu.hide(100);
+        });
+    });
+  </script>
+        <asp:ContentPlaceHolder ID="scriptmanager_bitis" runat="server"></asp:ContentPlaceHolder>
+    </form>
+    <script type="text/javascript">
+        function resim(img) {
+            //alert(img);
+            document.getElementById("ortakisim_Image1").src = img;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\bin\NotDefteriBlog.dll.config
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\bin\NotDefteriBlog.dll
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\bin\NotDefteriBlog.pdb
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\bin\EntityFramework.dll
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\bin\EntityFramework.SqlServer.dll
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\bin\EntityFramework.xml
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\bin\EntityFramework.SqlServer.xml
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\obj\Debug\NotDefteriBlog.dll
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\obj\Debug\NotDefteriBlog.pdb
+C:\Users\Ugr\documents\visual studio 2013\Projects\NotDefteriBlog\NotDefteriBlog\obj\Debug\NotDefteriBlog.csprojResolveAssemblyReference.cache

@@ -1,0 +1,189 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
+
+body{
+	#background-image:url("../img/background.jpg");
+	background-color:#cbcbcb;
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Gentium Book Basic', serif;
+}
+
+
+
+.menualan{
+	font-size: 35px;
+	position: fixed;
+	height: 48px;
+	width: 48px;
+	top: 152px;
+	left:52px;
+}
+.menuac{
+	position:fixed;
+	width:160px;
+	background-color:#757575;
+	top: 150px;
+	left:50px;
+	border-radius:5px;
+	padding:5px 0px 5px;
+	box-shadow: 0 0 5px black;
+}
+
+.menuac ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    background-color:#757575;
+}
+
+.menuac li a {
+    display: block;
+    color: #FFF;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.mesaj{
+    visibility:hidden;
+	position:fixed;
+	width:250px;
+	top:20%;
+	right:5%;
+}
+
+.table{
+    margin-bottom: 0 !important;
+}
+
+.bar{
+	height:2px;
+	width:10px;
+	border: 2px solid;
+}
+
+.menuac li a:hover {
+    background-color: #555;
+    color: white;
+	border-radius:5px;
+}
+
+.search{
+	position: fixed;
+	height: 48px;
+	width: 150px;
+	top:93% !important;
+	right: 0px;
+	bottom:0px;
+	font-size:48px;
+    left: 95% !important;
+}
+
+.row{
+	color:#757575;
+}
+
+.he-300{
+	height:300px;
+	background-repeat: repeat-y;
+}
+
+.top--7{
+	top:-7px;
+}
+
+.he-300 img{
+	height:300px;
+	width:100%;
+}
+
+.left-arrow{
+	font-size: 48px;
+	height: 48px;
+	width: 48px;
+	position:absolute;
+	top:100px;
+	left:50px;
+}
+
+.right-arrow{
+	font-size: 48px;
+	height: 48px;
+	width: 48px;
+	position:absolute;
+	top:100px;
+	right:50px;
+}
+
+.bg-white{
+	background-color:#FFFFFF;
+}
+
+.main-border-4{
+	box-shadow: 0 0 5px black;
+}
+
+.main-border-3{
+	box-shadow: 1px 0 5px black;
+}
+
+.pd-30{
+	padding:30px;
+}
+.pd-7{
+	padding:7px;
+}
+
+.pdb-30{
+	padding-bottom:30px;
+}
+
+.mgb-30{
+	margin-bottom:30px;
+}
+
+hr{
+	margin-top: 8px !important;
+    margin-bottom: 8px !important;
+
+}
+
+.max-img{
+	max-width:100%;
+}
+
+.titlebox {
+    background-color: #f5f5f5;
+    border: 1px solid #d9d9d9;
+    cursor: default;
+    white-space: nowrap;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-right:2px;
+    padding:2px;
+
+}
+
+.font35{
+    font-size:20px;
+    position:static !important;
+    color:#ff0000;
+}
+
+.fontorange{
+    margin-top:5px;
+    font-size:20px;
+    position:static !important;
+    color:#f8910c;
+}
+
+.fontgreen{
+    margin-top:5px;
+    position:static !important;
+    font-size:20px;
+    color:#20e112;
+}

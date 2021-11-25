@@ -1,0 +1,5 @@
+Options +FollowSymLinks 
+
+RewriteEngine On 
+
+RewriteRule ^(.+)\.aspx$ $1 [QSA,NC,R=301,L]
